@@ -1,0 +1,61 @@
+{
+  "name": "pane-registry",
+  "version": "0.0.0",
+  "description": "Solid-compatible Panes: Pane Registry",
+  "main": "src/paneRegistry.js",
+  "types": "src/index.d.ts",
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "echo nothing to build",
+    "lint": "eslint",
+    "lint-fix": "eslint --fix",
+    "test": "jest --no-coverage",
+    "test-coverage": "jest --coverage",
+    "test-watch": "jest --watch",
+    "prepublishOnly": "npm run lint && npm test",
+    "preversion": "npm run lint && npm run test",
+    "postversion": "git push origin main --follow-tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SolidOS/pane-registry.git"
+  },
+  "keywords": [
+    "solid",
+    "chat",
+    "message",
+    "discusssion",
+    "decentralized",
+    "web",
+    "rdf",
+    "ldp",
+    "linked",
+    "pane",
+    "app",
+    "data"
+  ],
+  "author": "Tim Berners-Lee <timbl@mit.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/solidos/pane-registry/issues"
+  },
+  "homepage": "https://github.com/solidos/pane-registry",
+  "dependencies": {
+    "rdflib": "2.4.0",
+    "solid-logic": "workspace:*"
+  },
+  "devDependencies": {
+    "eslint": "^9.39.4",
+    "globals": "^17.6.0",
+    "jest": "^30.4.2",
+    "neostandard": "^0.13.0"
+  },
+  "solidosDependencies": [
+    "rdflib",
+    "solid-logic"
+  ]
+}
