@@ -1,0 +1,115 @@
+{
+  "name": "mashlib",
+  "version": "0.0.0",
+  "description": "Data mashup library",
+  "main": "dist/mashlib.js",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist ./src/versionInfo.ts",
+    "build": "npm run clean && npm run build-version && npm run typecheck && npm run build-dist && npm run postbuild-js",
+    "build:workspace": "npm run clean && npm run build-version && npm run typecheck && npm run build-dist:workspace && npm run postbuild-js",
+    "build:ghpages": "npm run clean && npm run build-version && npm run typecheck && PUBLIC_PATH=/mashlib/dist/ npm run build-dist && npm run postbuild-js",
+    "build-version": "./timestamp.sh > src/versionInfo.ts && eslint 'src/versionInfo.ts' --fix",
+    "build-dist": "webpack --progress --mode=production",
+    "build-dist:workspace": "webpack --progress --mode=production --env resolutionMode=workspace",
+    "postbuild-js": "rm -f dist/versionInfo.d.ts dist/versionInfo.d.ts.map",
+    "lint": "eslint",
+    "lint-fix": "eslint --fix",
+    "typecheck": "tsc --noEmit",
+    "test": "echo no jest tests",
+    "prepublishOnly": "npm run lint && npm run build && npm run bundlesize",
+    "bundlesize": "bundlesize",
+    "preversion": "npm run lint && npm run typecheck && npm test",
+    "postpublish": "git push origin main --follow-tags",
+    "watch": "npm run build-version && webpack --watch",
+    "watch:workspace": "npm run build-version && webpack --watch --env resolutionMode=workspace",
+    "start": "npm run build-version && webpack serve --config webpack.config.mjs",
+    "start:workspace": "npm run build-version && webpack serve --config webpack.config.mjs --env resolutionMode=workspace"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SolidOS/mashlib.git"
+  },
+  "keywords": [
+    "solid",
+    "decentralized",
+    "widgets",
+    "ui",
+    "web",
+    "rdf",
+    "ldp",
+    "panes",
+    "linked",
+    "data",
+    "browser"
+  ],
+  "author": "Tim Berners-Lee <timbl@mit.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/solidos/mashlib/issues"
+  },
+  "homepage": "https://github.com/solidos/mashlib",
+  "dependencies": {
+    "pane-registry": "workspace:*",
+    "patch-package": "^8.0.1",
+    "rdflib": "2.4.0",
+    "solid-logic": "workspace:*",
+    "solid-panes": "workspace:*",
+    "solid-ui": "workspace:*"
+  },
+  "overrides": {
+    "rdflib": "$rdflib",
+    "solid-logic": "$solid-logic",
+    "solid-ui": "$solid-ui",
+    "pane-registry": "$pane-registry"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.28.6",
+    "@babel/core": "^7.29.0",
+    "@babel/plugin-transform-runtime": "^7.29.0",
+    "@babel/preset-env": "^7.29.5",
+    "@babel/preset-typescript": "^7.28.5",
+    "@types/node": "^24.13.2",
+    "@typescript-eslint/parser": "^8.59.3",
+    "babel-loader": "^10.1.1",
+    "bundlesize2": "^0.0.35",
+    "copy-webpack-plugin": "^14.0.0",
+    "css-loader": "^7.1.4",
+    "eslint": "^10.4.0",
+    "file-loader": "^6.2.0",
+    "globals": "^17.6.0",
+    "html-webpack-plugin": "^5.6.7",
+    "mini-css-extract-plugin": "^2.10.2",
+    "node-polyfill-webpack-plugin": "^4.1.0",
+    "terser-webpack-plugin": "^5.6.0",
+    "typescript": "^6.0.3",
+    "undici-types": "^7.18.2",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.106.2",
+    "webpack-cli": "^7.0.2",
+    "webpack-dev-server": "^5.2.4"
+  },
+  "solidosDependencies": [
+    "rdflib",
+    "solid-logic",
+    "solid-ui",
+    "pane-registry",
+    "solid-panes"
+  ],
+  "bundlesize": [
+    {
+      "path": "./dist/*.min.js",
+      "maxSize": "2 MB",
+      "compression": "brotli"
+    },
+    {
+      "path": "./dist/*[^.min].js",
+      "maxSize": "3 MB",
+      "compression": "brotli"
+    }
+  ]
+}
