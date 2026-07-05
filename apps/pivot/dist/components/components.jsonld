@@ -1,0 +1,16 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/pivot/^0.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:pivot",
+  "@type": "Module",
+  "requireName": "pivot",
+  "import": [
+    "pivot:dist/storage/RdfPatchingStore.jsonld",
+    "pivot:dist/storage/patch/ThrowingN3Patcher.jsonld",
+    "pivot:dist/FedcmHttpHandler.jsonld",
+    "pivot:dist/http/output/PivotResponseWriter.jsonld",
+    "pivot:dist/identity/interaction/password/MigratedPasswordLoginHandler.jsonld",
+    "pivot:dist/identity/PivotOidcHttpHandler.jsonld"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/pivot/^0.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:pivot",
+  "components": [
+    {
+      "@id": "pivot:dist/storage/patch/ThrowingN3Patcher.jsonld#ThrowingN3Patcher",
+      "@type": "Class",
+      "requireElement": "ThrowingN3Patcher",
+      "extends": [
+        "css:dist/storage/patch/N3Patcher.jsonld#N3Patcher"
+      ],
+      "comment": "To minimize code disruption, this patcher can be put at the end of the CSS patcher chain, so that the RdfPatchingStore can know that all checks passed and it can use for instance RdfLib to apply the patch.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "pivot:dist/storage/patch/ThrowingN3Patcher.jsonld#ThrowingN3Patcher__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/componentsjs/^5.0.0/components/context.jsonld",
+    {
+      "npmd": "https://linkedsoftwaredependencies.org/bundles/npm/",
+      "pivot": "npmd:pivot/^0.0.0/",
+      "PatchRequiresTurtlePreservation": {
+        "@id": "pivot:dist/storage/RdfPatchingStore.jsonld#PatchRequiresTurtlePreservation",
+        "@prefix": true,
+        "@context": {}
+      },
+      "RdfPatchingStore": {
+        "@id": "pivot:dist/storage/RdfPatchingStore.jsonld#RdfPatchingStore",
+        "@prefix": true,
+        "@context": {
+          "source": {
+            "@id": "pivot:dist/storage/RdfPatchingStore.jsonld#RdfPatchingStore_source"
+          },
+          "patchHandler": {
+            "@id": "pivot:dist/storage/RdfPatchingStore.jsonld#RdfPatchingStore_patchHandler"
+          }
+        }
+      },
+      "ThrowingN3Patcher": {
+        "@id": "pivot:dist/storage/patch/ThrowingN3Patcher.jsonld#ThrowingN3Patcher",
+        "@prefix": true,
+        "@context": {}
+      },
+      "FedcmHttpHandler": {
+        "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "baseUrl": {
+            "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler_baseUrl"
+          },
+          "cookieStore": {
+            "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler_cookieStore"
+          },
+          "webIdStore": {
+            "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler_webIdStore"
+          },
+          "": {
+            "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler_cookieStore"
+          }
+        }
+      },
+      "PivotResponseWriter": {
+        "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter",
+        "@prefix": true,
+        "@context": {
+          "metadataWriter": {
+            "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter_metadataWriter"
+          },
+          "store": {
+            "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter_store"
+          },
+          "targetExtractor": {
+            "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter_targetExtractor"
+          }
+        }
+      },
+      "MigratedPasswordLoginHandler": {
+        "@id": "pivot:dist/identity/interaction/password/MigratedPasswordLoginHandler.jsonld#MigratedPasswordLoginHandler",
+        "@prefix": true,
+        "@context": {
+          "args_accountStore": {
+            "@id": "pivot:dist/identity/interaction/password/MigratedPasswordLoginHandler.jsonld#MigratedPasswordLoginHandler_args_accountStore"
+          },
+          "args_passwordStore": {
+            "@id": "pivot:dist/identity/interaction/password/MigratedPasswordLoginHandler.jsonld#MigratedPasswordLoginHandler_args_passwordStore"
+          },
+          "args_cookieStore": {
+            "@id": "pivot:dist/identity/interaction/password/MigratedPasswordLoginHandler.jsonld#MigratedPasswordLoginHandler_args_cookieStore"
+          },
+          "accountStore": {
+            "@id": "pivot:dist/identity/interaction/password/MigratedPasswordLoginHandler.jsonld#MigratedPasswordLoginHandler_args_accountStore"
+          },
+          "passwordStore": {
+            "@id": "pivot:dist/identity/interaction/password/MigratedPasswordLoginHandler.jsonld#MigratedPasswordLoginHandler_args_passwordStore"
+          },
+          "cookieStore": {
+            "@id": "pivot:dist/identity/interaction/password/MigratedPasswordLoginHandler.jsonld#MigratedPasswordLoginHandler_args_cookieStore"
+          }
+        }
+      },
+      "PivotOidcHttpHandler": {
+        "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler",
+        "@prefix": true,
+        "@context": {
+          "baseUrl": {
+            "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler_baseUrl"
+          },
+          "responseWriter": {
+            "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler_responseWriter"
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/pivot/^0.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:pivot",
+  "components": [
+    {
+      "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter",
+      "@type": "Class",
+      "requireElement": "PivotResponseWriter",
+      "extends": [
+        "css:dist/http/output/BasicResponseWriter.jsonld#BasicResponseWriter"
+      ],
+      "parameters": [
+        {
+          "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter_metadataWriter",
+          "range": "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+        },
+        {
+          "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter_store",
+          "range": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore"
+        },
+        {
+          "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter_targetExtractor",
+          "range": "css:dist/http/input/identifier/TargetExtractor.jsonld#TargetExtractor"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter__member_targetExtractor",
+          "memberFieldName": "targetExtractor"
+        },
+        {
+          "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter_metadataWriter"
+        },
+        {
+          "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter_store"
+        },
+        {
+          "@id": "pivot:dist/http/output/PivotResponseWriter.jsonld#PivotResponseWriter_targetExtractor"
+        }
+      ]
+    }
+  ]
+}

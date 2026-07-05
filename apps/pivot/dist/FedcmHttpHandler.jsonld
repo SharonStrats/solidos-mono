@@ -1,0 +1,108 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/pivot/^0.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:pivot",
+  "components": [
+    {
+      "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler",
+      "@type": "Class",
+      "requireElement": "FedcmHttpHandler",
+      "extends": [
+        "css:dist/server/HttpHandler.jsonld#HttpHandler"
+      ],
+      "comment": "HTTP handler that handle all FedCM requests.",
+      "parameters": [
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler_baseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler_cookieStore",
+          "range": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler_webIdStore",
+          "range": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_cookieStore",
+          "memberFieldName": "cookieStore"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_webIdStore",
+          "memberFieldName": "webIdStore"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_get_token",
+          "memberFieldName": "get_token"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_get_client_id_secret",
+          "memberFieldName": "get_client_id_secret"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_deleteToken",
+          "memberFieldName": "deleteToken"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_handleWebIdentity",
+          "memberFieldName": "handleWebIdentity"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_handleFedcmJSON",
+          "memberFieldName": "handleFedcmJSON"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_handleAccountsEnpoint",
+          "memberFieldName": "handleAccountsEnpoint"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_handleClientMetadataEndpoint",
+          "memberFieldName": "handleClientMetadataEndpoint"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_handleToken",
+          "memberFieldName": "handleToken"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler__member_handleDisconnect",
+          "memberFieldName": "handleDisconnect"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler_baseUrl"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler_cookieStore"
+        },
+        {
+          "@id": "pivot:dist/FedcmHttpHandler.jsonld#FedcmHttpHandler_webIdStore"
+        }
+      ]
+    }
+  ]
+}

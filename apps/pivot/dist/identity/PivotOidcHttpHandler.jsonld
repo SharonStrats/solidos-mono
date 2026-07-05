@@ -1,0 +1,61 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/pivot/^0.0.0/components/context.jsonld",
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:pivot",
+  "components": [
+    {
+      "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler",
+      "@type": "Class",
+      "requireElement": "PivotOidcHttpHandler",
+      "extends": [
+        "css:dist/server/HttpHandler.jsonld#HttpHandler"
+      ],
+      "comment": "HTTP handler that redirects all requests to the OIDC library.",
+      "parameters": [
+        {
+          "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler_baseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler_responseWriter",
+          "range": "css:dist/http/output/ResponseWriter.jsonld#ResponseWriter"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler__member_responseWriter",
+          "memberFieldName": "responseWriter"
+        },
+        {
+          "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler_baseUrl"
+        },
+        {
+          "@id": "pivot:dist/identity/PivotOidcHttpHandler.jsonld#PivotOidcHttpHandler_responseWriter"
+        }
+      ]
+    }
+  ]
+}
