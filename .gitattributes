@@ -1,0 +1,1 @@
+packages/mashlib/test/slideshow/*.jpg filter=lfs diff=lfs merge=lfs -text
