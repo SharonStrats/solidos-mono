@@ -2,7 +2,7 @@ packages:
   - "packages/*"
   - "packages/*/*"
   - "packages/**"
-  - "server"
+  - "apps/*"
 allowBuilds:
   esbuild: true
   solid-ui: true

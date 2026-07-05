@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "echo \"define later\"",
     "build": "pnpm -r build",
+    "dev:pivot": "pnpm --filter pivot dev",
+    "dev:mashlib": "pnpm --filter mashlib build --watch",
+    "dev": "pnpm -r --parallel dev",
     "test": "pnpm -r test"
   },
   "keywords": [],
