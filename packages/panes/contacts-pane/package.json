@@ -1,0 +1,87 @@
+{
+  "name": "contacts-pane",
+  "version": "3.2.1-5",
+  "description": "Contacts Pane: Contacts manager for Address Book, Groups, and Individuals.",
+  "main": "dist/index.cjs.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && npm run typecheck && vite build",
+    "watch": "vite build --watch",
+    "lint": "eslint",
+    "lint-fix": "eslint --fix",
+    "typecheck": "tsc --noEmit",
+    "typecheck-test": "tsc --noEmit -p tsconfig.test.json",
+    "test": "npm run typecheck-test && vitest run",
+    "test-coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run build && npm run lint && npm run test",
+    "preversion": "npm run lint && npm run test",
+    "postpublish": "git push origin main --follow-tags",
+    "start": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SolidOS/contacts-pane.git"
+  },
+  "keywords": [
+    "solid",
+    "contacts",
+    "addressbook",
+    "decentralized",
+    "web",
+    "rdf",
+    "ldp",
+    "linked",
+    "pane",
+    "app",
+    "data"
+  ],
+  "author": "Tim Berners-Lee <timbl@mit.edu>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SolidOS/contacts-pane/issues"
+  },
+  "homepage": "https://github.com/SolidOS/contacts-pane",
+  "dependencies": {
+    "@lit/context": "^1.1.6",
+    "lit": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.0",
+    "@typescript-eslint/parser": "^8.53.1",
+    "@vitest/coverage-v8": "^4.0.18",
+    "axe-core": "^4.11.1",
+    "eslint": "^9.39.2",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^17.1.0",
+    "jsdom": "^28.1.0",
+    "neostandard": "^0.13.0",
+    "pane-registry": "workspace:*",
+    "rdflib": "^2.4.0",
+    "solid-logic": "workspace:*",
+    "solid-ui": "workspace:*",
+    "solidos-toolkit": "0.0.0-dev.4732b482981fe79667863101428a9c7249083a67",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.16",
+    "vite-plugin-css-injected-by-js": "^5.0.1",
+    "vitest": "^4.0.18",
+    "vitest-axe": "^0.1.0"
+  },
+  "overrides": {
+    "rdflib": "$rdflib",
+    "solid-logic": "$solid-logic",
+    "solid-ui": "$solid-ui"
+  }
+}
